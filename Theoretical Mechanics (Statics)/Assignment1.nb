@@ -1,0 +1,38 @@
+(* Knowing that the tension in cable BC is 725 N, determine the magnitude of the resultant of the three forces exerted at point B of beam AB. *)
+In[]:=
+N[Norm[725*Normalize[{-840, 800}] + 
+       500*Normalize[{-3, -4}] + 
+       780*Normalize[{12, -5}]]]
+Out[]=
+225.887
+
+(* Two forces P and Q are applied as shown to an aircraft connection. Knowing that the connection is in equilibrium and that P = 600 lb and Q = 800 lb, determine the tension in rod A *)
+In[]:=
+N[(600 - 800*Sin[30*Degree])/
+     Cos[30*Degree]]
+Out[]=
+230.94
+
+(* The hydraulic cylinder BC exerts on member AB a force P directed along line BC. Knowing that P must have a 600-N component perpendicular to member AB, determine the magnitude of the force P. *)
+In[]:=
+N[600/Cos[(180 - 45 - 30 - 90)*Degree]]
+Out[]=
+621.166
+
+(* Three cables are used to tether a balloon as shown. Determine the vertical force P exerted by the balloon at A knowing that the tension in cable AD is 481 N. *)
+In[]:=
+AD = Normalize[{0, -5.6, -3.3}];
+AB = Normalize[{-4.2, -5.6, 0}];
+AC = Normalize[{2.4, -5.6, 4.2}];
+FAD = 481;
+Solve[{FAD*AD + FAB*AB + FAC*AC == {0, -Y, 0}}, {FAB, FAC, Y}]
+Out[]=
+{{FAB -> 232.571, FAC -> 430.257, Y -> 926.057}}
+
+
+(* Knowing that the tension is 510 lb in cable AB and 425 lb in cable AC, determine the magnitude of the resultant of the forces exerted at A by the two cables. *)
+In[]:=
+N[Norm[510*Normalize[{40, -45, 60}] + 
+       425*Normalize[{100, -45, 60}]]]
+Out[]=
+912.921
