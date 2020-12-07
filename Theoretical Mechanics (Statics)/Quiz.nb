@@ -1,0 +1,15 @@
+https://develop.open.wolframcloud.com/view/newNotebook?ext=nb
+
+QUESTION 1
+a = 130 mm;
+P = 290;
+Q = 388;
+P-Q
+
+QUESTION 2
+a=4;
+Y = 27;
+DA = Normalize[{-1, 0, 0}];
+DB = Normalize[{0.75a, -3a, -a}];
+DC = Normalize[{a, -3a, 1.5a}];
+Solve[{FDA*DA + FDB*DB + FDC*DC == {0, -Y, 0}}, {FDA, FDB, FDC}]

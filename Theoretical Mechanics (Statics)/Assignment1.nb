@@ -1,3 +1,4 @@
+https://develop.open.wolframcloud.com/view/newNotebook?ext=nb
 (* Knowing that the tension in cable BC is 725 N, determine the magnitude of the resultant of the three forces exerted at point B of beam AB. *)
 In[]:=
 N[Norm[725*Normalize[{-840, 800}] + 
